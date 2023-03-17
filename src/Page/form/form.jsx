@@ -39,7 +39,7 @@ export default function FormPage() {
                 </div>
                 <div className="password">
                   <input type="password" placeholder="Digite sua senha" name="password" id="password" />
-                  <img src={EyeOff}className="icon" id="eyes" onClick={Eyes}/>
+                  <img src={EyeOff}className="icon"alt="Botão de ocultar e ver senha" id="eyes" onClick={Eyes}/>
                 </div>
                 <small id="PasswordFail"></small>
               </div>
