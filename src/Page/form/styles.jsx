@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import IMG from '../../assets/img.png';
-import EyeOff from '../../assets/eye-off.svg';
+
 
 export const Home = styled.section`
   width: 100%;
@@ -81,7 +81,9 @@ export const Form = styled.div`
   input::placeholder{
     color: var(---Gray-400);
   }
-  input.invalid{
+  input.invalid,
+  .input .password input.invalid
+  {
     border: 1px solid #ED3A5A;
   }
   small{
@@ -105,7 +107,6 @@ export const Form = styled.div`
     top: 50%;
     right: 12px;
     transform: translateY(-50%);
-    background: url(${EyeOff});
     width: 20px;
     height: 20px;
     cursor: pointer;

@@ -2,11 +2,16 @@ import { Home, Form, Imagem } from "./styles";
 import Logo from "../../assets/logo.svg";
 import LogoName from "../../assets/logoName.svg";
 import validation from "./validation";
+import Eyes  from "./eyes";
+import EyeOff from '../../assets/eye-off.svg';
+import { PreLoad } from "./components/PreLoad";
+
 export default function FormPage() {
 
 
   return (
     <Home>
+      <PreLoad/>
       <Form>
         <figure>
           <img src={Logo} alt="Logo" />
@@ -34,8 +39,9 @@ export default function FormPage() {
                 </div>
                 <div className="password">
                   <input type="password" placeholder="Digite sua senha" name="password" id="password" />
-                  <div className="icon"></div>
+                  <img src={EyeOff}className="icon" id="eyes" onClick={Eyes}/>
                 </div>
+                <small id="PasswordFail"></small>
               </div>
             </div>
             <button type="submit" onClick={validation}>Entrar</button>
